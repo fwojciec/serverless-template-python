@@ -11,5 +11,5 @@ phases:
       - mypy src
       - black src --check
       - pytest tests/unit
-      - ./deploy-ci.sh serverless-template-python-test
+      - ./deploy.sh serverless-template-python-test
       - STACK_NAME=serverless-template-python-test pytest tests/integration
