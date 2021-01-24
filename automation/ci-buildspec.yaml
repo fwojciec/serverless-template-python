@@ -9,4 +9,5 @@ phases:
       - pip install -r requirements-test.txt
       - flake8 src
       - mypy src
+      - black src --check
       - pytest tests/unit
