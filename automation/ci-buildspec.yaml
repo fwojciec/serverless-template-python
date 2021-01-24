@@ -7,4 +7,6 @@ phases:
   build:
     commands:
       - pip install -r requirements-test.txt
+      - flake8 src
+      - mypy src
       - pytest tests/unit
