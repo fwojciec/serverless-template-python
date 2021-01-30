@@ -10,8 +10,11 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Events:
-        HttpEvent:
+        HttpApiEvent:
           Type: HttpApi
+          Properties:
+            Method: GET
+            Path: /
       CodeUri: src/helloworld/
       Handler: api.handler
       Runtime: python3.8
